@@ -16,7 +16,8 @@ void printMenu() {
 void factorial() {
     // I recommend writing your factorial code here
     int A;
-    int X;
+    int n = 1;
+    int i = 1;
     cout << "Enter a number: ";
     cin >> A;
     if (A < 1) {
@@ -24,19 +25,69 @@ void factorial() {
         cin >> A;
     }
     else {
-        for (int i = 1; i <= A; ++i) {
-            X *= i;
-            cout << A << "! = " << i << " = " << X << endl;
+        cout << A << "! = ";
+        do {
+            n *= i;
+            cout << i << " * ";
+            i += 1;
+        } while (i < A);
+        if (i = A) {
+            n *= i;
+            cout << i << " = " << n <<endl;
         }
-        
     }
-
 }
 void arithmetic() {
     // I recommend writing your arithmetic series code here
+    int A;
+    int B;
+    int C;
+    int n = 0;
+    int i = 1;
+    cout << "Enter a number to start at: ";
+    cin >> A;
+    cout << "Enter a number to add each time: ";
+    cin >> B;
+    cout << "Enter the number of elements in the series: ";
+    cin >> C;
+    do {
+        n += A;
+        cout << A << " + ";
+        A += B;
+        i += 1;
+    } while (i < C);
+    if (i = C) {
+        n += A;
+        cout << A << " = " << n << endl;
+    }
+
 }
 void geometric() {
     // I recommend writing your geometric series code here
+    int A;
+    int B;
+    int C;
+    int X;
+    int n = 0;
+    int i = 1;
+    cout << "Enter a number to start at: ";
+    cin >> X;
+    cout << "Enter a number to multiply by each time: ";
+    cin >> B;
+    cout << "Enter the number of elements in the series: ";
+    cin >> C;
+    do {
+        A = X * pow(B, i-1);
+        n += A;
+        cout << A << " + ";
+        i += 1;
+    } while (i < C);
+    if (i = C) {
+        A = X * pow(B, i - 1);
+        n += A;
+        cout << A << " = " << n << endl;
+    }
+    
 }
 int main() {
     int choice;
